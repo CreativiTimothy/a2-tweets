@@ -1,19 +1,53 @@
 a:link {
-	color: #FF6634;
-	text-decoration: none;
+    color: #ff6634;
+    text-decoration: none;
 }
 
 a:visited {
-	color: #FF6634;
-	text-decoration: none;
+    color: #ff6634;
+    text-decoration: none;
 }
 
 a:hover {
-	color: #FF9D77;
-	text-decoration: underline;
+    color: #ff9d77;
+    text-decoration: underline;
 }
 
 a:active {
-	color: #B32B00;
-	text-decoration: underline;
+    color: #b32b00;
+    text-decoration: underline;
+}
+
+/* Add breathing room below the sticky navigation. */
+main {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+/* Keep Vega visualizations responsive within Bootstrap's container. */
+#activityVis,
+#distanceVis {
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+/* The streaming bonus uses distanceVis instead of a second chart. */
+#distanceVisAggregated {
+    display: none;
+}
+
+#textFilter {
+    width: min(100%, 30rem);
+    padding: 0.375rem 0.75rem;
+}
+
+/* Text labels accompany these colors, so meaning does not depend on color alone. */
+.sentiment-positive { color: #146c43; font-weight: 600; }
+.sentiment-negative { color: #b02a37; font-weight: 600; }
+.sentiment-neutral { color: #495057; font-weight: 600; }
+.sentiment-mixed { color: #997404; font-weight: 600; }
+
+@media (max-width: 768px) {
+    .navbar-nav { padding: 0.5rem; }
+    .table { font-size: 0.9rem; }
 }
